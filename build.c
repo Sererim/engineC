@@ -4,17 +4,17 @@
 // Build config stuff
 
 // To enable extensions:
-// #define OOGABOOGA_ENABLE_EXTENSIONS   1
-// #define OOGABOOGA_EXTENSION_PARTICLES 1
+#define OOGABOOGA_ENABLE_EXTENSIONS   1
+#define OOGABOOGA_EXTENSION_PARTICLES 1
 
-#define INITIAL_PROGRAM_MEMORY_SIZE MB(5)
+#define INITIAL_PROGRAM_MEMORY_SIZE MB(10)
 
 // You might want to increase this if you get a log warning saying the temporary storage was overflown.
 // In many cases, overflowing the temporary storage should be fine since it just wraps back around and
 // allocations made way earlier in the frame are likely not used anymore.
 // This might however not always be the case, so it's probably a good idea to make sure you always have
 // enough temporary storage for your game.
-#define TEMPORARY_STORAGE_SIZE MB(2) 
+#define TEMPORARY_STORAGE_SIZE MB(25) 
 
 // Enable VERY_DEBUG if you are having memory bugs to detect things like heap corruption earlier.
 // #define VERY_DEBUG 1
@@ -48,7 +48,7 @@ typedef struct Context_Extra {
 // #include "oogabooga/examples/input_example.c"
 // #include "oogabooga/examples/sprite_animation.c"
 // #include "oogabooga/examples/window_test.c"
-#include "oogabooga/examples/offscreen_drawing.c"
+// #include "oogabooga/examples/offscreen_drawing.c"
 // #include "oogabooga/examples/threaded_drawing.c"
 
 // These examples require some extensions to be enabled. See top respective files for more info.
@@ -57,4 +57,4 @@ typedef struct Context_Extra {
 // #include "oogabooga/examples/sanity_tests.c"
 
 // This is where you swap in your own project!
-// #include "entry_yourepicgamename.c"
+#include "main.c"
